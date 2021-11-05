@@ -12,6 +12,17 @@ drawings:
 
 # Efficient Parallel Algorithms for Betweenness- and Closeness-Centrality in Dynamic Graphs
 
+---
+
+<div class="mt-36"></div>
+
+- <span class="text-gary-400">Background</span>
+- <span class="text-gary-400">Properties on the graph</span>
+- <span class="text-gary-400">Betweenness-centrality</span>
+- <span class="text-gary-400">Closeness-centrality</span>
+
+---
+
 
 
 ---
