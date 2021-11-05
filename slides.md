@@ -24,6 +24,8 @@ drawings:
 
 ---
 
+<div class="mt-14"></div>
+
 Efficient <span class="text-red-600">Parallel Algorithms</span> for <span class="text-red-600">Betweenness- and Closeness-Centrality</span> in <span class="text-red-600">Dynamic Graphs</span>
 
 <div class="mt-16"></div>
@@ -33,6 +35,11 @@ Some keywords
 - Dynamic graph (how to calculate something on a dynamic graph)
 - Parallel algorithm
 - Betweenness- and closeness- centrality
+
+<br />
+<br />
+
+- Trying to get some results on dynamic graph
 
 ---
 
@@ -52,6 +59,10 @@ Some keywords
 <img width="200" src="/pics/8.png" />
 </div>
 
+<div class="mt-8"></div>
+
+- staic results + transfer
+
 ---
 
 # Parallel algorithm
@@ -70,7 +81,7 @@ Some keywords
 
 <div v-click at="3" class="mt-10">
 
-- <span class="text-red-600">BCC: biconnected components</span>(will cover this very soon)
+- <span class="text-red-600">BCC: biconnected components</span> (will cover this very soon)
 
 </div>
 
@@ -141,11 +152,10 @@ $$
 
 # Techniques mentioned
 
-<div class="mt-10"/>
+<div class="mt-18"/>
 
-- Batch update
 - BCC (Biconnected component decomposition)
-- 
+- Redundant chains
 - Redundant nodes
 
 ---
@@ -256,19 +266,17 @@ $$
 
 <div class="mt-10"></div>
 
-What learned:
-
-- Several centrality measurements <sup>[2]</sup>
+**What learned**:
+- Several centrality measurements <sup>[4]</sup>
 - Ideas on calculating some properties on graph, especially in parallel
 
-Upsides:
+**Upsides**:
 - Clear theoretical derivations
 
-Downsides:
+**Downsides**:
 - The algorithm now only works on unweighted and undirected graphs (mentioned in future works)
 - use previous people's works, really a lot (you need to read at least another 3 papers to understand the author's work)
   - some modifications on previous works to improve efficiency
-
 
 
 ---
@@ -276,6 +284,11 @@ Downsides:
 # References
 
 - [1] F. Jamour, S. Skiadopoulos, and P. Kalnis, “Parallel Algorithm for Incremental Betweenness Centrality on Large Graphs,” IEEE Trans. Parallel Distrib. Syst., vol. 29, no. 3, pp. 659–672, Mar. 2018, doi: 10.1109/TPDS.2017.2763951.
+- [2] U. Brandes, “A faster algorithm for betweenness centrality*,” The Journal of Mathematical Sociology, vol. 25, no. 2, pp. 163–177, Jun. 2001, doi: 10.1080/0022250X.2001.9990249.
+- [3] A. E. Sariyuce, E. Saule, K. Kaya, and U. V. Catalyurek, “STREAMER: A distributed framework for incremental closeness centrality computation,” in 2013 IEEE International Conference on Cluster Computing (CLUSTER), Indianapolis, IN, USA, Sep. 2013, pp. 1–8. doi: 10.1109/CLUSTER.2013.6702680.
+- [4] “Centrality - Neo4j Graph Data Science,” Neo4j Graph Database Platform. https://neo4j.com/docs/graph-data-science/1.7/algorithms/centrality/ (accessed Nov. 05, 2021).
+
+
 
 
 
