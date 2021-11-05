@@ -160,11 +160,6 @@ $$
 
 ---
 
-# Batch update
-
-
----
-
 # BCC
 
 <div class="mt-10"/>
@@ -180,10 +175,26 @@ $$
 
 ---
 
+# Redundant chains
+
+- the author's definition of chain is a bit different:
+  - two end points (degree != 2) and many middle nodes (degree == 2)
+
+<div class="mt-12"/>
+<div class="flex justify-center"><img class="" width="300" src="/pics/chain.png" /> </div>
+
+<div class="mt-8"/>
+
+- redundant chain: only one common-end-point chain will be used when calculating shortest path
+  - we can save calculation
+
+
+---
+
 # Redundant nodes
 <div class="mt-10"/>
 
-<img width="150" src="/pics/r3r4.png" />
+ <img width="150" src="/pics/r3r4.png" />
 
 <arrow x1="260" y1="240" x2="200" y2="220" color="#b99095" width="2" arrowSize="1" />
 
@@ -194,7 +205,7 @@ $$
 - $R_3$: three neighbors of $v$ are connected to each other
 - $R_4$: four neighbors of $v$ are connected to each other
 - shortest path does not pass through $v$
-- <span class="text-teal-700">we can possibly save computation</span>
+- <span class="text-blue-600">we can save computation</span>
 - the changes are recorded, so no need to scan the whole graph every time
 
 
@@ -248,6 +259,11 @@ $$
 
 # Closeness centrality
 
+
+---
+
+# Results
+
 ---
 
 # TOC
@@ -275,8 +291,8 @@ $$
 
 **Downsides**:
 - The algorithm now only works on unweighted and undirected graphs (mentioned in future works)
-- use previous people's works, really a lot (you need to read at least another 3 papers to understand the author's work)
-  - some modifications on previous works to improve efficiency
+- depends on previous people's works a lot (you need to read at least another 3 papers to understand the author's work)
+  - some modifications to improve efficiency
 
 
 ---
