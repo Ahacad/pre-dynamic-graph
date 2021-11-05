@@ -63,19 +63,16 @@ Some keywords
 <div class="flex">
 <img width="300" src="/pics/graph-plain.png" />
 
-<img v-click at="1" class="ml-50" width="300" src="/pics/graph-plain2.png" />
+<img v-click at="2" class="ml-50" width="300" src="/pics/graph-plain2.png" />
 </div>
 
 <arrow v-click at="1" x1="400" y1="270" x2="550" y2="270" color="#b99095" width="2" arrowSize="1" />
 
-<div v-click at="2" class="mt-10">
+<div v-click at="3" class="mt-10">
 
-- <span class="text-red-600">BCC</span>
+- <span class="text-red-600">BCC: biconnected components</span>(will cover this very soon)
 
 </div>
----
-
-# BCC
 
 ---
 
@@ -137,9 +134,40 @@ $$
 
 # Batch update
 
+
 ---
 
 # BCC
+
+<div class="mt-10"/>
+
+- maximal *biconnected subgrarph*
+  - the graph remain connected even if remove any node
+
+<img class="ml-50" width="300" src="/pics/bcc.png" />
+
+<div class="mt-6"/>
+
+- <span class="text-teal-600">BCC help limit the scope of BFS when calculating centralities</span><sup>3,4</sup>
+
+---
+
+# Redundant nodes
+<div class="mt-10"/>
+
+<img width="150" src="/pics/r3r4.png" />
+
+<arrow x1="260" y1="240" x2="200" y2="220" color="#b99095" width="2" arrowSize="1" />
+
+<arrow x1="220" y1="340" x2="160" y2="280" color="#b99095" width="2" arrowSize="1" />
+
+<div class="mt-8"/>
+
+- $R_3$: three neighbors of $v$ are connected to each other
+- $R_4$: four neighbors of $v$ are connected to each other
+- shortest path does not pass through $v$
+- <span class="text-teal-700">we can possibly save computation</span>
+
 
 ---
 
@@ -165,6 +193,25 @@ $$
 
 # Implementation
 
+---
+
+# Results
+
+---
+
+# TOC
+
+<div class="mt-22"></div>
+
+- <span class="text-gray-400">Background</span>
+- <span class="text-gray-400">Properties on the graph</span>
+- <span class="text-gray-400">Betweenness-centrality</span>
+- <span class="text-black">Closeness-centrality</span>
+- <span class="text-gray-400">Conclusions</span>
+
+---
+
+# Closeness centrality
 
 ---
 
@@ -182,16 +229,26 @@ $$
 
 # Conclusions
 
+<div class="mt-10"></div>
+
 What learned:
 
 - Several centrality measurements <sup>[2]</sup>
 - Ideas on calculating some properties on graph, especially in parallel
+
+Upsides:
+- Clear theoretical derivations
+
+Downsides:
+- The algorithm now only works on unweighted and undirected graphs (mentioned in future works)
+
 
 
 ---
 
 # References
 
+- [1] F. Jamour, S. Skiadopoulos, and P. Kalnis, “Parallel Algorithm for Incremental Betweenness Centrality on Large Graphs,” IEEE Trans. Parallel Distrib. Syst., vol. 29, no. 3, pp. 659–672, Mar. 2018, doi: 10.1109/TPDS.2017.2763951.
 
 
 
