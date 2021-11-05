@@ -111,7 +111,9 @@ $$
 
 ---
 
-<div class="mt-36"></div>
+# TOC
+
+<div class="mt-22"></div>
 
 - <span class="text-gray-400">Background</span>
 - <span class="text-black">Properties on the graph</span>
@@ -121,6 +123,69 @@ $$
 
 ---
 
+# Techniques mentioned
+
+<div class="mt-10"/>
+
+- Batch update
+- BCC (Biconnected component decomposition)
+- 
+- Redundant nodes
+- Maintenance
+
+---
+
+# Batch update
+
+---
+
+# BCC
+
+---
+
+# TOC
+
+<div class="mt-22"></div>
+
+- <span class="text-gray-400">Background</span>
+- <span class="text-gray-400">Properties on the graph</span>
+- <span class="text-black">Betweenness-centrality</span>
+- <span class="text-gray-400">Closeness-centrality</span>
+- <span class="text-gray-400">Conclusions</span>
+
+---
+
+# Betweenness centrality
+
+---
+
+## Algorithm
+
+---
+
+# Implementation
+
+
+---
+
+# TOC
+
+<div class="mt-22"></div>
+
+- <span class="text-gray-400">Background</span>
+- <span class="text-gray-400">Properties on the graph</span>
+- <span class="text-gray-400">Betweenness-centrality</span>
+- <span class="text-gray-400">Closeness-centrality</span>
+- <span class="text-black">Conclusions</span>
+
+---
+
+# Conclusions
+
+What learned:
+
+- Several centrality measurements <sup>[2]</sup>
+- Ideas on calculating some properties on graph, especially in parallel
 
 
 ---
