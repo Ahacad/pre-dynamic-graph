@@ -63,10 +63,10 @@ Some keywords
 <div class="flex">
 <img width="300" src="/pics/graph-plain.png" />
 
-<img v-click at="2" class="ml-50" width="300" src="/pics/graph-plain2.png" />
+<img v-click at="1" class="ml-50" width="300" src="/pics/graph-plain2.png" />
 </div>
 
-<arrow v-click at="1" x1="400" y1="270" x2="550" y2="270" color="#b99095" width="2" arrowSize="1" />
+<arrow v-click at="2" x1="400" y1="270" x2="550" y2="270" color="#b99095" width="2" arrowSize="1" />
 
 <div v-click at="3" class="mt-10">
 
@@ -88,7 +88,9 @@ $$
 
 <div class="flex justify-center"><img class="" width="300" src="/pics/cc.png" /> </div>
 
+- $dis(u, v)$: shortest path length between $u$ and $v$
 - how close you are to others
+
 
 ---
 
@@ -97,7 +99,7 @@ $$
 <div class="mt-10"/>
 
 $$
-bc(v) = \sum_{s \neq v \neq t} \frac{\sigma_{st}(v)}{\sigma_{st}}
+bc(v) = \sum_{s \neq v \neq t} \frac{\delta_{st}(v)}{\delta_{st}}
 $$
 
 - ratio of: shortest paths that pass through $v$ to shortest paths number
@@ -105,6 +107,23 @@ $$
 
 <div class="mt-6"/>
 <div class="flex justify-center"><img class="" width="300" src="/pics/bc.png" /> </div>
+
+- <span class="text-blue-600">note that both the two centralites relate to *shortest path*</span>
+
+---
+
+# Dependency
+
+<div class="mt-20"/>
+
+Dependency of a vertex $s$ on another vertex $v$ on a graph $G$ is defined as:
+
+$$
+\delta_s[v] = \sum_{t \in G} \delta_{st}(v)
+$$
+
+- all the short paths that has to pass through v
+
 
 ---
 
@@ -128,7 +147,6 @@ $$
 - BCC (Biconnected component decomposition)
 - 
 - Redundant nodes
-- Maintenance
 
 ---
 
@@ -167,6 +185,7 @@ $$
 - $R_4$: four neighbors of $v$ are connected to each other
 - shortest path does not pass through $v$
 - <span class="text-teal-700">we can possibly save computation</span>
+- the changes are recorded, so no need to scan the whole graph every time
 
 
 ---
@@ -241,6 +260,8 @@ Upsides:
 
 Downsides:
 - The algorithm now only works on unweighted and undirected graphs (mentioned in future works)
+- use previous people's works, really a lot (you need to read at least another 3 papers to understand the author's work)
+  - some modifications on previous works to improve efficiency
 
 
 
