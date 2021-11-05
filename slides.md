@@ -16,12 +16,117 @@ drawings:
 
 <div class="mt-36"></div>
 
-- <span class="text-gary-400">Background</span>
-- <span class="text-gary-400">Properties on the graph</span>
-- <span class="text-gary-400">Betweenness-centrality</span>
-- <span class="text-gary-400">Closeness-centrality</span>
+- <span class="black">Introduction</span>
+- <span class="text-gray-400">Properties on the graph</span>
+- <span class="text-gray-400">Betweenness-centrality</span>
+- <span class="text-gray-400">Closeness-centrality</span>
+- <span class="text-gray-400">Conclusions</span>
 
 ---
+
+Efficient <span class="text-red-600">Parallel Algorithms</span> for <span class="text-red-600">Betweenness- and Closeness-Centrality</span> in <span class="text-red-600">Dynamic Graphs</span>
+
+<div class="mt-16"></div>
+
+Some keywords
+
+- Dynamic graph (how to calculate something on a dynamic graph)
+- Parallel algorithm
+- Betweenness- and closeness- centrality
+
+---
+
+# Dynamic graph
+
+<div class='mt-16' />
+<div class="flex">
+<img width="200" src="/pics/1.png" />
+<img width="200" src="/pics/2.png" />
+<img width="200" src="/pics/3.png" />
+<img width="200" src="/pics/4.png" />
+</div>
+<div class="flex">
+<img width="200" src="/pics/5.png" />
+<img width="200" src="/pics/6.png" />
+<img width="200" src="/pics/7.png" />
+<img width="200" src="/pics/8.png" />
+</div>
+
+---
+
+# Parallel algorithm
+
+- How to be parallel on a graph?
+
+<div class="mt-10"/>
+
+<div class="flex">
+<img width="300" src="/pics/graph-plain.png" />
+
+<img v-click at="1" class="ml-50" width="300" src="/pics/graph-plain2.png" />
+</div>
+
+<arrow v-click at="1" x1="400" y1="270" x2="550" y2="270" color="#b99095" width="2" arrowSize="1" />
+
+<div v-click at="2" class="mt-10">
+
+- <span class="text-red-600">BCC</span>
+
+</div>
+---
+
+# BCC
+
+---
+
+# Closeness-centrality
+
+<div class="mt-10"/>
+
+$$
+cc(v) = \frac{N - 1}{\sum_u dis(u, v)}
+$$
+
+<div class="mt-10"/>
+
+<div class="flex justify-center"><img class="" width="300" src="/pics/cc.png" /> </div>
+
+- how close you are to others
+
+---
+
+# Betweenness-centrality
+
+<div class="mt-10"/>
+
+$$
+bc(v) = \sum_{s \neq v \neq t} \frac{\sigma_{st}(v)}{\sigma_{st}}
+$$
+
+- ratio of: shortest paths that pass through $v$ to shortest paths number
+- measures the node's influence
+
+<div class="mt-6"/>
+<div class="flex justify-center"><img class="" width="300" src="/pics/bc.png" /> </div>
+
+---
+
+<div class="mt-36"></div>
+
+- <span class="text-gray-400">Background</span>
+- <span class="text-black">Properties on the graph</span>
+- <span class="text-gray-400">Betweenness-centrality</span>
+- <span class="text-gray-400">Closeness-centrality</span>
+- <span class="text-gray-400">Conclusions</span>
+
+---
+
+
+
+---
+
+# References
+
 
 
 
