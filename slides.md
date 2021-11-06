@@ -121,22 +121,21 @@ $$
 
 - <span class="text-blue-600">note that both the two centralites relate to *shortest path*</span>
 
----
+<!-- --- -->
+<!-- Dependency-->
 
-# Dependency
+<!--<div class="mt-20"/>-->
 
-<div class="mt-20"/>
+<!--Dependency of a vertex $s$ on another vertex $v$ on a graph $G$ is defined as:-->
 
-Dependency of a vertex $s$ on another vertex $v$ on a graph $G$ is defined as:
+<!--$$-->
+<!--\delta_s[v] = \sum_{t \in G} \delta_{st}(v)-->
+<!--$$-->
 
-$$
-\delta_s[v] = \sum_{t \in G} \delta_{st}(v)
-$$
-
-- all the short paths that has to pass through v
+<!--- all the short paths that has to pass through v-->
 
 
----
+--- 
 
 # TOC
 
@@ -278,10 +277,18 @@ $$
 
 ---
 
-# Results
+# Results: speed up
 
 <div class="mt-10"/>
 <div class="flex justify-center"><img class="" width="500" src="/pics/cc-result.png" /> </div>
+
+---
+
+# Results: BCR
+
+<div class="mt-10"/>
+<div class="flex justify-center"><img class="" width="400" src="/pics/cc-result-2.png" /> </div>
+
 
 ---
 
@@ -299,6 +306,16 @@ $$
 
 # Conclusions
 
+<div class="mt-20"/>
+
+- the author made use of some key observations (BCR) to improve efficiency on:
+  - betweenness centrality by Jamour<sup>[1]</sup>
+  - closeness centrality by Sarıyüce<sup>[3]</sup>
+
+---
+
+# Conclusions
+
 <div class="mt-10"></div>
 
 **What learned**:
@@ -306,7 +323,7 @@ $$
 - Ideas on calculating some properties on graph, especially in parallel
 
 **Upsides**:
-- Clear theoretical derivations
+- Good theoretical derivations
 
 **Downsides**:
 - The algorithm now only works on unweighted and undirected graphs (mentioned in future works)
