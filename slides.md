@@ -26,7 +26,7 @@ drawings:
 
 <div class="mt-14"></div>
 
-Efficient <span class="text-red-600">Parallel Algorithms</span> for <span class="text-red-600">Betweenness- and Closeness-Centrality</span> in <span class="text-red-600">Dynamic Graphs</span>
+Efficient <span class="text-red-600">Parallel Algorithms</span> for <span class="text-red-600">Betweenness- and Closeness-Centrality</span> in <span class="text-red-600">Dynamic Graphs</span> (ICS '20)
 
 <div class="mt-16"></div>
 
@@ -39,7 +39,7 @@ Some keywords
 <br />
 <br />
 
-- Trying to get some results on dynamic graph
+<!--- Trying to get some results on dynamic graph -->
 
 ---
 
@@ -61,7 +61,7 @@ Some keywords
 
 <div class="mt-8"></div>
 
-- staic results + transfer
+- static results + transfer
 
 ---
 
@@ -172,7 +172,7 @@ $$
 
 <div class="mt-6"/>
 
-- <span class="text-teal-600">BCC help limit the scope of BFS when calculating centralities</span><sup>3,4</sup>
+- shortest paths between intra-BCC nodes are confined to the BCC
 
 ---
 
@@ -187,7 +187,7 @@ $$
 <div class="mt-8"/>
 
 - redundant chain: only one common-end-point chain will be used when calculating shortest path
-  - we can save calculation
+  - we can save computation
 
 
 ---
@@ -226,17 +226,19 @@ $$
 
 # Betweenness centrality
 
+<div class="mt-10"></div>
+
+<img class="" width="250" src="/pics/algo1.png" /> 
+
+<br />
+<br />
+
+- $B = \{e_1, e_2, \dots, e_n\}$, the batch-updated edges
+- <span class="text-purple-600">quite some details ommitted here</span>
+
 ---
 
-# Algorithm
-
----
-
-# Implementation
-
----
-
-# Results
+# Results: speed up
 
 
 <div class="mt-10"/>
@@ -244,6 +246,18 @@ $$
 
 - all datasets are preprocessed, made undirected, unweigted. Self-loops, multiple edges are removed
 - the reuslts are very good
+
+---
+
+# Results: BCR
+
+<div class="mt-10"/>
+<div class="flex justify-center"><img class="" width="400" src="/pics/bc-result-2.png" /> </div>
+
+- B: batch update
+- C: redundant chains
+- R: redundant nodes
+- Jamour<sup>[1]</sup> + BCR = algorithm the author used 
 
 ---
 
@@ -265,6 +279,9 @@ $$
 ---
 
 # Results
+
+<div class="mt-10"/>
+<div class="flex justify-center"><img class="" width="500" src="/pics/cc-result.png" /> </div>
 
 ---
 
@@ -305,47 +322,3 @@ $$
 - [2] U. Brandes, “A faster algorithm for betweenness centrality*,” The Journal of Mathematical Sociology, vol. 25, no. 2, pp. 163–177, Jun. 2001, doi: 10.1080/0022250X.2001.9990249.
 - [3] A. E. Sariyuce, E. Saule, K. Kaya, and U. V. Catalyurek, “STREAMER: A distributed framework for incremental closeness centrality computation,” in 2013 IEEE International Conference on Cluster Computing (CLUSTER), Indianapolis, IN, USA, Sep. 2013, pp. 1–8. doi: 10.1109/CLUSTER.2013.6702680.
 - [4] “Centrality - Neo4j Graph Data Science,” Neo4j Graph Database Platform. https://neo4j.com/docs/graph-data-science/1.7/algorithms/centrality/ (accessed Nov. 05, 2021).
-
-
-
-
-
----
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
----
-
-# Code
-
-Use code snippets and get the highlighting directly![^1]
-
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = {...user, ...update}  
-  saveUser(id, newUser)
-}
-```
-
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
-<style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
