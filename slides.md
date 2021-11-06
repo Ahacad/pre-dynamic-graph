@@ -81,7 +81,7 @@ Some keywords
 
 <div v-click at="3" class="mt-10">
 
-- <span class="text-red-600">BCC: biconnected components</span> (will cover this very soon)
+- <span class="text-red-600">BCC: biconnected components （双联通分量）</span> (will cover this very soon)
 
 </div>
 
@@ -274,6 +274,14 @@ $$
 
 # Closeness centrality
 
+<img class="" width="250" src="/pics/algo3.png" /> 
+
+<br />
+<br />
+
+- BCT: Block cut tree
+- $D_V[a] = \sum_{u \in V} d(a, u)$
+
 
 ---
 
@@ -311,7 +319,6 @@ $$
 - the author made use of some key observations (BCR) to improve efficiency on:
   - betweenness centrality by Jamour<sup>[1]</sup>
   - closeness centrality by Sarıyüce<sup>[3]</sup>
-
 ---
 
 # Conclusions
