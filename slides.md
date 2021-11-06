@@ -155,8 +155,9 @@ $$
 <div class="mt-18"/>
 
 - BCC (Biconnected component decomposition)
-- Redundant chains
-- Redundant nodes
+1. Batch update (pack a bunch of updates rather than a single one)
+2. Redundant chains
+3. Redundant nodes
 
 ---
 
@@ -227,7 +228,7 @@ $$
 
 ---
 
-## Algorithm
+# Algorithm
 
 ---
 
@@ -241,6 +242,7 @@ $$
 <div class="mt-10"/>
 <div class="flex justify-center"><img class="" width="500" src="/pics/bc-result.png" /> </div>
 
+- all datasets are preprocessed, made undirected, unweigted. Self-loops, multiple edges are removed
 - the reuslts are very good
 
 ---
